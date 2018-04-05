@@ -1,0 +1,28 @@
+{
+  "name": "wyz-property-maintenance-and-suppies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TigerFeihuChen/wyz-application.git"
+  },
+  "author": "Tiger Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TigerFeihuChen/wyz-application/issues"
+  },
+  "homepage": "https://github.com/TigerFeihuChen/wyz-application#readme",
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

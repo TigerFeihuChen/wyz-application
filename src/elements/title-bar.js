@@ -1,23 +1,23 @@
 import BaseElement from './base-element.js';
 
 export default class TitleBar extends BaseElement {
-    constructor(title, linksObj){
+    constructor(title, links){
         super();
         this.title = title;
-        this.linksObj = linksObj;
+        this.links = links;
     }
 
     getLinks(){
-        let links = '';
-        for(let obj of this.linksObj){
-            links += `<a class="mdl-navigation__link" href="${obj.url}">${obj.text}</a>`;
+        let linksStr = '';
+        for(let str of this.links){
+            linksStr += `<a class="mdl-navigation__link">${str}</a>`;
         }
 
-        return links;
+        return linksStr;
     }
 
     buildElementString(){
-        let links = this.getLinks();
+        let linksStr = this.getLinks();
         return `
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <header class="mdl-layout__header">
@@ -28,14 +28,14 @@ export default class TitleBar extends BaseElement {
                     <div class="mdl-layout-spacer"></div>
                     <!-- Navigation. We hide it in small screens. -->
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        ${links}
+                        ${linksStr}
                     </nav>
                     </div>
                 </header>
                 <div class="mdl-layout__drawer">
                     <span class="mdl-layout-title">${this.title}</span>
                     <nav class="mdl-navigation">
-                        ${links}
+                        ${linksStr}
                     </nav>
                 </div>
                 <main class="mdl-layout__content">
